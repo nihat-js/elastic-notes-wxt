@@ -72,7 +72,7 @@ async function exportToTextFile() {
   const blob = new Blob([quickList.value.join('\n')], { type: 'text/plain' });
   const link = document.createElement('a');
   link.href = window.URL.createObjectURL(blob);
-  link.download = 'sample.txt';
+  link.download = 'quick-list.txt';
   link.click();
   //   await browser.downloads.download({
   //     url: blob, // Blob URL
