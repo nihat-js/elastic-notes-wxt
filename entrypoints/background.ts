@@ -7,9 +7,9 @@ export default defineBackground(() => {
   browser.contextMenus.onClicked.addListener(async (info, tab) => {
     if (info.menuItemId === 'add-to-quick-list') {
       const selectedText = info.selectionText || ""; // The text that was selected
-      console.log(`Adding to Quick List: ${selectedText}`);
+      // console.log(`Adding to Quick List: ${selectedText}`);
       let quickList: string[] = await storage.getItem("local:quickList") || [];
-      quickList.push(selectedText);
+      quickList.unshift(selectedText);
       await storage.setItem("local:quickList", quickList)
     }
 
