@@ -4,7 +4,10 @@ import vue from '@vitejs/plugin-vue';
 // See https://wxt.dev/api/config.html
 export default defineConfig({
   manifest: {
-    permissions: ["storage", "contextMenus"]
+    permissions: ["storage", "contextMenus"],
+    name: "Elastic Notes",
+    "author": "@nihat-js",
+    "version": "1.1",
   },
   imports: {
     addons: {

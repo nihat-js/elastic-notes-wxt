@@ -1,13 +1,14 @@
 <template>
   <header>
     <h2>Elastic Notes</h2>
+    <img src="@/assets/logo.svg" width="36px">
   </header>
 
   <div class="tabs">
     <div class="tab" :class="{ active: currentTab === 'quick-list' }" @click="currentTab = 'quick-list'">Quick List
     </div>
-    <div class="tab" :class="{ active: currentTab === 'timers' }" @click="currentTab = 'timers'">Timers</div>
-    <div class="tab" :class="{ active: currentTab === 'settings' }" @click="currentTab = 'settings'">Settings</div>
+    <div class="tab" :class="{ active: currentTab === 'timers' }">Timers (Coming soon)</div>
+    <!-- <div class="tab" :class="{ active: currentTab === 'settings' }" @click="currentTab = 'settings'">Settings</div> -->
   </div>
 
   <!-- Content for Each Tab -->
@@ -50,15 +51,17 @@ let notificationsEnabled = ref(true) // Settings for notifications
 header {
   text-align: center;
   background-color: #f5f5f5;
-  padding: 10px;
+  font-size: 20px;
   border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 10px;
 }
 
 .tabs {
   display: flex;
   justify-content: space-around;
   background-color: #f0f0f0;
-  padding: 10px;
+  padding: 8px 4px;
   border-bottom: 1px solid #ccc;
 }
 
