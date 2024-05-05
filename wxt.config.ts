@@ -3,6 +3,9 @@ import vue from '@vitejs/plugin-vue';
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
+  manifest: {
+    permissions: ["storage", "contextMenus"]
+  },
   imports: {
     addons: {
       vueTemplate: true,
